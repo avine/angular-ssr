@@ -9,6 +9,8 @@ import { UsersService } from './users.service';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
+  columns: string[] = ['name', 'email'];
+
   users!: User[];
 
   constructor(private readonly usersService: UsersService) {}

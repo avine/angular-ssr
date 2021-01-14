@@ -19,7 +19,7 @@ export class TransferStateService {
 
   get$<T>(key: string, value$: Observable<T>): Observable<T> {
     const value = this.getOnBrowser<T>(key);
-    if (value) {
+    if (value !== null) {
       return of(value);
     }
     return value$.pipe(tap((val) => this.setOnServer(key, val)));

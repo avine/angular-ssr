@@ -9,7 +9,7 @@ import { UsersService } from './users.service';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
-  columns: string[] = ['name', 'email'];
+  columns: string[] = ['name', 'company', 'email'];
 
   users!: User[];
 
